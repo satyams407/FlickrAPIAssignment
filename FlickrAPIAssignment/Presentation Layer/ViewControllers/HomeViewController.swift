@@ -49,6 +49,7 @@ class HomeViewController: UIViewController {
         searchBar.showsCancelButton = true
         headingLabel.isHidden = true
         searchBar.placeholder = StringConstants.searchBarPlaceHolder
+        searchBar.becomeFirstResponder()
     }
     
     private func fetchPhotos() {
