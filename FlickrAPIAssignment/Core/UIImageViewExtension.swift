@@ -1,17 +1,15 @@
 //
-//  CustomUIImageView.swift
+//  UIImageViewExtension.swift
 //  FlickrAPIAssignment
 //
-//  Created by Satyam Sehgal on 26/05/19.
+//  Created by Satyam Sehgal on 03/08/19.
 //  Copyright © 2019 Satyam Sehgal. All rights reserved.
 //
 
-
 import UIKit
-import Foundation
 
 var imageCache = NSCache<NSString, AnyObject>()
-
+    
 extension UIImageView {
     // Note: There is bug that i am not able to solve in given time for this assignment
     // Bug is when we do fast scrolling then sometimes photos at particular indexpath is reassigned with different pic.
@@ -45,3 +43,4 @@ extension UIImageView {
         }).resume()
     }
 }
+

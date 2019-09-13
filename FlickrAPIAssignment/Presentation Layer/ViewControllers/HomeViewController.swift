@@ -2,7 +2,7 @@
 //  HomeViewController.swift
 //  FlickrAPIAssignment
 //
-//  Created by Satyam Sehgal on 26/05/19.
+//  Created by Satyam Sehgal on 03/08/19.
 //  Copyright © 2019 Satyam Sehgal. All rights reserved.
 //
 
@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
     var photoDataSource = [PhotoCellModel]()
     var debounceTimer: Timer?
     let fetchPhotoService = FetchPhotoService()
-    var searchText: String = StringConstants.mountainKeyword // intialise for first result
+    var searchText: String = StringConstants.roseKeyword // intialise for first result
     let itemsPerRow: CGFloat = 3.0
     var currentPageNumber = 1
     var fetchingMorePhotos = false
@@ -65,12 +65,10 @@ class HomeViewController: UIViewController {
                     strongSelf.photoDataSource.append(cellModel)
                 }
             }
-            DispatchQueue.main.async {
-                strongSelf.resultsCollectionView.isHidden = false
-                strongSelf.activityIndicatorView.isHidden = true
-                strongSelf.resultsCollectionView.reloadData()
-                strongSelf.activityIndicatorView.stopAnimating()
-            }
+            strongSelf.resultsCollectionView.isHidden = false
+            strongSelf.activityIndicatorView.isHidden = true
+            strongSelf.resultsCollectionView.reloadData()
+            strongSelf.activityIndicatorView.stopAnimating()
         })
     }
     

@@ -2,20 +2,22 @@
 //  AppDelegate.swift
 //  FlickrAPIAssignment
 //
-//  Created by Satyam Sehgal on 26/05/19.
+//  Created by Satyam Sehgal on 03/08/19.
 //  Copyright © 2019 Satyam Sehgal. All rights reserved.
 //
 
 import UIKit
+import Highcharts
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        HIChartView.preload()
         return true
     }
 

@@ -2,7 +2,7 @@
 //  NetworkRequest.swift
 //  FlickrAPIAssignment
 //
-//  Created by Satyam Sehgal on 26/05/19.
+//  Created by Satyam Sehgal on 03/08/19.
 //  Copyright © 2019 Satyam Sehgal. All rights reserved.
 //
 
@@ -16,10 +16,14 @@ class NetworkRequest {
         // Todo - Can Check for internet connection
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data, error == nil else {
-                completion(.failure(.fetchError))
+                DispatchQueue.main.async {
+                    completion(.failure(.fetchError))
+                }
                 return
             }
-            completion(.success(data))
+            DispatchQueue.main.async {
+                completion(.success(data))
+            }
         }.resume()
     }
 }

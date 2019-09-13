@@ -2,7 +2,7 @@
 //  FetchEndPoint.swift
 //  FlickrAPIAssignment
 //
-//  Created by Satyam Sehgal on 26/05/19.
+//  Created by Satyam Sehgal on 03/08/19.
 //  Copyright © 2019 Satyam Sehgal. All rights reserved.
 //
 
@@ -26,7 +26,7 @@ extension FetchEndPoint {
     var httpMethod: AppConstants.HTTPMethod {
         return .get
     }
-  //https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=3e7cc266ae2b0e0d78e279ce8e361736&format=json&nojsoncallback=1&safe_search=1&text=kittens
+  //https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=3e7cc266ae2b0e0d78e279ce8e361736&format=json&nojsoncallback=1&safe_search=1&text=rose&page=1
     var urlParameters: Parameters {
         switch self {
         case .fetchPhotos(let searchText, let pageNumber):

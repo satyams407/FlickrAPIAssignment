@@ -17,20 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flickr API Assigment by: Satyam Sehgal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nj7-rR-wZX">
-                                <rect key="frame" x="10" y="424.5" width="394" height="57.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" red="0.70135364783596876" green="0.70135364783596876" blue="0.70135364783596876" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="nj7-rR-wZX" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Inc-Mk-JwC"/>
-                            <constraint firstAttribute="trailing" secondItem="nj7-rR-wZX" secondAttribute="trailing" constant="10" id="MGX-sO-e8e"/>
-                            <constraint firstItem="nj7-rR-wZX" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="10" id="Qwx-a2-ISW"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

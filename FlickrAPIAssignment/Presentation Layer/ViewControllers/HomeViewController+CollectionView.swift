@@ -2,7 +2,7 @@
 //  HomeViewController+CollectionView.swift
 //  FlickrAPIAssignment
 //
-//  Created by Satyam Sehgal on 26/05/19.
+//  Created by Satyam Sehgal on 03/08/19.
 //  Copyright © 2019 Satyam Sehgal. All rights reserved.
 //
 
@@ -16,6 +16,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let collectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: AppConstants.CellIdentifiers.photoCellectionCell.rawValue, for: indexPath)
         if let cell = collectionCell as? PhotoCollectionViewCell {
+            cell.indexPath = indexPath
+            cell.setRowLabel()
             cell.configureCell(with: photoDataSource[indexPath.row])
         }
         return collectionCell

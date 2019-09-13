@@ -2,14 +2,14 @@
 //  FetchPhotoServiceProtocol.swift
 //  FlickrAPIAssignment
 //
-//  Created by Satyam Sehgal on 26/05/19.
+//  Created by Satyam Sehgal on 03/08/19.
 //  Copyright © 2019 Satyam Sehgal. All rights reserved.
 //
 
 import Foundation
 
 protocol FetchPhotoServiceProtocol {
-    func fetchPhotos(with endPoint: FetchEndPoint, completionHandler:@escaping (Result<PhotoResponseModel,APIServiceError>) -> Void)
+    func fetchPhotos(with endPoint: FetchEndPoint, completionHandler: @escaping (Result<PhotoResponseModel,APIServiceError>) -> Void)
 }
 
 extension FetchPhotoServiceProtocol {
