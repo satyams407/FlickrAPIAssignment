@@ -9,5 +9,5 @@
 import Foundation
 
 struct AppURLConstants {
-    static let basefetchURL = "https://api.flickr.com/services/rest/"
+    static let basefetchURL = "https://api.flickr.com/"
 }

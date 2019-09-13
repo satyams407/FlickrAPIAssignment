@@ -8,14 +8,17 @@
 
 import Foundation
 
-typealias Parameters = [String: Any]
 
 // Can have mutilple cases for fetch request for different api calls
 enum FetchEndPoint {
     case fetchPhotos(searchText: String, pageNumber: Int)
 }
 
-extension FetchEndPoint {
+extension FetchEndPoint: FetchEndPointProtocol {
+    var path: String {
+        return "/services/rest/"
+    }
+    
     var baseURL: URL {
         guard let url = URL(string: AppURLConstants.basefetchURL) else {
             fatalError("url can't be made right now")
@@ -23,10 +26,11 @@ extension FetchEndPoint {
         return url
     }
     
-    var httpMethod: AppConstants.HTTPMethod {
+    var httpMethod: HTTPMethod {
         return .get
     }
-  //https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=3e7cc266ae2b0e0d78e279ce8e361736&format=json&nojsoncallback=1&safe_search=1&text=rose&page=1
+
+    //https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=3e7cc266ae2b0e0d78e279ce8e361736&format=json&nojsoncallback=1&safe_search=1&text=rose&page=1
     var urlParameters: Parameters {
         switch self {
         case .fetchPhotos(let searchText, let pageNumber):
